@@ -95,7 +95,7 @@ body .main .hero-btn {
   padding: 16px 24px;
   text-align: center;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -159,7 +159,8 @@ body .main .services-list {
 body .main .services-list img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .main .team {
   display: flex;
@@ -194,7 +195,8 @@ body .main .team-list-item {
 }
 body .main .team-list-item img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 1px solid #E7E9FC;
 }
 body .main .team-list-item h3 {
@@ -208,33 +210,17 @@ body .main .team-list-item p {
   letter-spacing: 0.32px;
   line-height: 1.5;
 }
-body .main .portfolio {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 40px;
-  padding: 0 10%;
-  padding-top: 80px;
-}
-body .main .portfolio-filter-buttons {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-body .main .portfolio-filter-buttons-item {
-  list-style: none;
-}
 body .footer {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
+  border-bottom: 1px solid #E7E9FC;
+  height: 72px;
   padding: 0 10%;
-  background-color: #2E2F42;
-  height: 312px;
 }
 body .footer-logo {
-  color: #F7F8FF;
+  color: #2E2F42;
   font-family: Raleway;
   font-size: 18px;
   font-style: normal;
@@ -246,12 +232,4 @@ body .footer-logo {
 }
 body .footer-logo-span {
   color: #4D5AE5;
-}
-body .footer p {
-  color: #F7F8FF;
-  width: 264px;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
