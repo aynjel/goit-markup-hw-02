@@ -208,7 +208,13 @@ body .main .team-list-item p {
   letter-spacing: 0.32px;
   line-height: 1.5;
 }
-body .main .portfolio {
+body .portfolio-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .portfolio-main .portfolio {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -216,13 +222,69 @@ body .main .portfolio {
   padding: 0 10%;
   padding-top: 80px;
 }
-body .main .portfolio-filter-buttons {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 24px;
+body .portfolio-main .portfolio .filter-list {
+  display: flex;
+  gap: 40px;
+  padding: 0;
 }
-body .main .portfolio-filter-buttons-item {
+body .portfolio-main .portfolio .filter-list-item {
   list-style: none;
+}
+body .portfolio-main .portfolio .filter-list-item .btn {
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: #4D5AE5;
+  background: #E7E9FC;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E7E9FC;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+body .portfolio-main .portfolio .filter-list-item .btn:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  background-color: rgba(77, 104, 255, 0.16);
+}
+body .portfolio-main .portfolio .filter-list-item .btn:active {
+  transform: scale(0.95);
+  color: #E7E9FC;
+  background: #4D5AE5;
+}
+body .portfolio-main .portfolio .filter-list-item .btn.active {
+  color: #E7E9FC;
+  background: #4D5AE5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+body .portfolio-main .portfolio .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+body .portfolio-main .portfolio .portfolio-list-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  background: #FFFFFF;
+  margin-bottom: 40px;
+  transition: all 0.3s ease-in-out;
+}
+body .portfolio-main .portfolio .portfolio-list-list-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.16);
 }
 body .footer {
   display: flex;
