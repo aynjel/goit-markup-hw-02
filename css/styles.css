@@ -1,18 +1,34 @@
-body {
+:root{
+  --primary-color: #4D5AE5;
+  --secondary-color: #2E2F42;
+  --tertiary-color: #F7F8FF;
+  --quaternary-color: #F4F4FD;
+  --quinary-color: #434455;
+}
+
+body{
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-body .header {
+
+header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #E7E9FC;
   height: 72px;
   padding: 0 10%;
 }
-body .header .nav .logo {
-  color: #2E2F42;
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav .logo {
+  color: var(--secondary-color);
   font-family: Raleway;
   font-size: 18px;
   font-style: normal;
@@ -22,48 +38,66 @@ body .header .nav .logo {
   text-decoration: none;
   margin-right: 40px;
 }
-body .header .nav .logo-span {
-  color: #4D5AE5;
+.nav .logo-span {
+  color: var(--primary-color);
 }
-body .header .nav-list {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 40px;
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
 }
-body .header .nav-list-item {
+
+.nav-list .nav-list-item {
   font-size: 16px;
   letter-spacing: 0.32px;
   font-weight: 500;
   line-height: 24px;
 }
-body .header .nav-list-item a {
-  color: #2E2F42;
+
+.nav-list .nav-list-item a {
+  color: var(--secondary-color);
   font-weight: 500;
   text-decoration: none;
 }
-body .header .nav-btn {
+
+.nav-list-item a:hover {
+  color: var(--primary-color);
+}
+
+.nav-btn {
   display: none;
 }
-body .header .address {
+
+.address {
   display: flex;
   align-items: flex-end;
   gap: 40px;
   margin-left: auto;
 }
-body .header .address a {
-  color: #2E2F42;
+
+.address a {
+  color: var(--secondary-color);
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
 }
-body .main {
+
+.address a:hover {
+  color: var(--primary-color);
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .main .hero {
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,23 +105,23 @@ body .main .hero {
   gap: 40px;
   height: calc(100vh - 72px);
   width: 100%;
-  background-color: #2E2F42;
+  background-color: var(--secondary-color);
 }
-body .main .hero-title {
+.hero-title {
   letter-spacing: 1.44px;
   line-height: 72px;
   text-align: center;
-  color: #F7F8FF;
+  color: var(--tertiary-color);
   font-size: 56px;
   font-weight: 700;
   word-wrap: break-word;
   width: 540px;
 }
-body .main .hero-btn {
-  background-color: #4D5AE5;
+.hero-btn {
+  background-color: var(--primary-color);
   border-radius: 4px;
   border: none;
-  color: #F7F8FF;
+  color: var(--tertiary-color);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.32px;
@@ -96,53 +130,54 @@ body .main .hero-btn {
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
-body .main .hero-btn:hover {
-  background-color: #2131df;
+.hero-btn:hover {
+  background-color: var(--quinary-color);
 }
-body .main .about {
+.hero-btn:active {
+  background-color: var(--primary-color);
+  transform: scale(0.98);
+}
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  padding: 0 10%;
-  padding-top: 80px;
+  padding: 40px 10%;
 }
-body .main .about-list {
+.about-list {
   display: flex;
   gap: 24px;
   padding: 0;
 }
-body .main .about-list-item {
+.about-list-item {
   width: 25%;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-body .main .about-list-item h3 {
-  color: #2E2F42;
+.about-list-item h3 {
+  color: var(--secondary-color);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
-body .main .about-list-item p {
-  color: #434455;
+.about-list-item p {
+  color: var(--quinary-color);
   letter-spacing: 0.32px;
   line-height: 1.5;
 }
-body .main .services {
+.services {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  padding: 0 10%;
-  padding-top: 80px;
-  height: 100vh;
+  padding: 40px 10%;
 }
-body .main .services-title {
-  color: #2E2F42;
+.services-title {
+  color: var(--secondary-color);
   line-height: 48px;
   text-align: center;
   font-size: 36px;
@@ -150,29 +185,32 @@ body .main .services-title {
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
-body .main .services-list {
+.services-list {
   display: flex;
   gap: 40px;
   padding: 0;
   list-style: none;
 }
-body .main .services-list img {
+.services-list img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.1s ease-in-out;
 }
-body .main .team {
+.services-list img:hover {
+  transform: scale(1.1);
+}
+.team {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  padding: 0 10%;
-  padding-top: 80px;
-  background-color: #F4F4FD;
-  height: 100vh;
+  padding: 40px 10%;
+  background-color: var(--quaternary-color);
 }
-body .main .team-title {
-  color: #2E2F42;
+.team-title {
+  color: var(--primary-color);
   line-height: 48px;
   text-align: center;
   font-size: 36px;
@@ -180,63 +218,64 @@ body .main .team-title {
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
-body .main .team-list {
+.team-list {
   display: flex;
   gap: 40px;
   padding: 0;
   list-style: none;
 }
-body .main .team-list-item {
+.team-list-item {
   list-style: none;
   text-align: center;
-  background-color: white;
+  background-color: var(--tertiary-color);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  border-radius: 4px;
+  transition: all 0.1s ease-in-out;
 }
-body .main .team-list-item img {
+.team-list-item img {
   width: 100%;
   object-fit: cover;
-  border: 1px solid #E7E9FC;
 }
-body .main .team-list-item h3 {
-  color: #2E2F42;
+.team-list-item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.16);
+  transform: scale(1.02);
+}
+.team-list-item h3 {
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
-body .main .team-list-item p {
-  color: #434455;
+.team-list-item p {
+  color: var(--quinary-color);
   letter-spacing: 0.32px;
   line-height: 1.5;
 }
-body .portfolio-main {
+.portfolio-main{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .portfolio-main .portfolio {
+.portfolio {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  padding: 0 10%;
-  padding-top: 80px;
+  padding: 40px 10%;
 }
-body .portfolio-main .portfolio .filter-list {
+.filter-list {
   display: flex;
   gap: 40px;
   padding: 0;
 }
-body .portfolio-main .portfolio .filter-list-item {
+.filter-list-item {
   list-style: none;
 }
-body .portfolio-main .portfolio .filter-list-item .btn {
+.filter-list-item .btn {
   padding: 12px 24px;
   border-radius: 4px;
-  color: #4D5AE5;
-  background: #E7E9FC;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid #E7E9FC;
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -246,21 +285,21 @@ body .portfolio-main .portfolio .filter-list-item .btn {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-body .portfolio-main .portfolio .filter-list-item .btn:hover {
+.filter-list-item .btn:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
   background-color: rgba(77, 104, 255, 0.16);
 }
-body .portfolio-main .portfolio .filter-list-item .btn:active {
+.filter-list-item .btn:active {
   transform: scale(0.95);
   color: #E7E9FC;
   background: #4D5AE5;
 }
-body .portfolio-main .portfolio .filter-list-item .btn.active {
+.filter-list-item .btn.active {
   color: #E7E9FC;
   background: #4D5AE5;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
 }
-body .portfolio-main .portfolio .portfolio-list {
+.portfolio-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -269,29 +308,37 @@ body .portfolio-main .portfolio .portfolio-list {
   list-style: none;
   margin-bottom: 80px;
 }
-body .portfolio-main .portfolio .portfolio-list-item {
+.portfolio-list-item {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   width: calc(33.333% - 40px);
   background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
 }
-body .portfolio-main .portfolio .portfolio-list-item img {
+.portfolio-list-item:hover{
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.16);
+  transform: scale(1.02);
+}
+.portfolio-list-item img {
   width: 100%;
   object-fit: cover;
   border: 1px solid #E7E9FC;
 }
-body .portfolio-main .portfolio .portfolio-list-item h2 {
+.portfolio-list-item h2 {
   color: #2E2F42;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
   padding: 0 16px;
 }
-body .portfolio-main .portfolio .portfolio-list-item p {
+.portfolio-list-item p {
   color: #2E2F42;
   letter-spacing: 0.32px;
   padding: 0 16px;
 }
-body .footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -300,7 +347,7 @@ body .footer {
   background-color: #2E2F42;
   height: 312px;
 }
-body .footer-logo {
+.footer-logo {
   color: #F7F8FF;
   font-family: Raleway;
   font-size: 18px;
@@ -311,14 +358,12 @@ body .footer-logo {
   text-decoration: none;
   margin-right: 40px;
 }
-body .footer-logo-span {
+.footer-logo-span {
   color: #4D5AE5;
 }
-body .footer p {
+.footer p {
   color: #F7F8FF;
   width: 264px;
   line-height: 24px;
   letter-spacing: 0.32px;
 }
-
-/*# sourceMappingURL=styles.css.map */
