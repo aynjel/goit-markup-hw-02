@@ -210,7 +210,7 @@ main {
   background-color: var(--quaternary-color);
 }
 .team-title {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   line-height: 48px;
   text-align: center;
   font-size: 36px;
@@ -241,7 +241,7 @@ main {
   transform: scale(1.02);
 }
 .team-list-item h3 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
